@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap");
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --primaryColor: #0d263b;
+  --secondaryColor: #696969;
+  --activeColor: #0061df;
+
+  --width: 1440px;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: #0d263b;
+}
+.subTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d263b;
+}
+.description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #696969;
+}
+.center {
+  display: flex;
+  align-items: center;
+}
+.alice-carousel__stage {
+  display: flex;
+  gap: 13px !important;
+}
+
+.alice-carousel__next-btn-wrapper,
+.alice-carousel__prev-btn-wrapper,
+.alice-carousel__dots {
+  display: none;
+}
+
+.footerTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.footerText {
+  /* width: 250px; */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footerText::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.footerText:hover::after {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
