@@ -4,17 +4,15 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 34px;
 `;
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   max-width: var(--width);
   width: 100%;
-  height: 482px;
-  padding: 0 130px;
   margin: auto;
-  span {
-    border-bottom: 1px solid;
+  padding: 0 130px;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
   }
 `;

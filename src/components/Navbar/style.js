@@ -26,6 +26,9 @@ const NavbarWrapper = styled.div`
   line-height: 24px;
   width: 100%;
   color: #ffffff;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 const Logo = styled.div`
   display: flex;

@@ -29,8 +29,8 @@ export const Navbar = () => {
   };
   const content = (
     <div>
-      <p onClick={() => navigate("/profile")}>My Prfoile</p>
-      <p onClick={() => navigate("/myProperties")}> My properties</p>
+      <p onClick={() => navigate("/profile")}>My Properties</p>
+      {/* <p onClick={() => navigate("/myProperties")}> My properties</p> */}
       <p onClick={() => navigate("/favorites")}>Favorites</p>
       <p onClick={logout}>Log Out</p>
     </div>
@@ -41,7 +41,7 @@ export const Navbar = () => {
   localStorage.getItem("token")
     ? (button = (
         <Popover placement="bottomRight" content={content} trigger="click">
-          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-user">fswd</i>
         </Popover>
       ))
     : (button = (

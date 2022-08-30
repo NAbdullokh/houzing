@@ -1,3 +1,4 @@
+import AddProduct from "../components/AddProduct";
 import Home from "../components/Home";
 import Profile from "../components/Profile";
 import Properties from "../components/Properties";
@@ -39,6 +40,13 @@ export const navbar = [
     title: "Profile",
     element: <Profile />,
     path: "/profile",
+    hidden: true,
+  },
+  {
+    id: 5,
+    title: "Profile",
+    element: <AddProduct />,
+    path: "/addProduct",
     hidden: true,
   },
 ];

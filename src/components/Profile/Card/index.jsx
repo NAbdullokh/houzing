@@ -1,8 +1,13 @@
 import React from "react";
-import { Container } from "./style";
+import { CardWrapper, Container } from "./style";
 
 const Card = ({ data }) => {
-  return <Container>{data[0].name}</Container>;
+  return (
+    <Container>
+      <p className="title">My Properties</p>
+      <CardWrapper>ds</CardWrapper>
+    </Container>
+  );
 };
 
 export default Card;
