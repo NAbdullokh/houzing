@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Container, Icon, Advanced, Section, Wrapper } from "./style";
+import { Container, Icon, Advanced, Section, Wrapper, BoxWrap } from "./style";
 import { Input } from "../Generic/Input";
 import { Button } from "../Generic/Button";
 import { Popover } from "antd";
@@ -46,14 +46,16 @@ export const Filter = () => {
           <Icon.Home />
         </Input>
 
-        <Popover placement="bottomRight" content={search} trigger="click">
-          <Button width={"131px"} type={"secondary"}>
-            <Icon.Setting /> Advanced
+        <BoxWrap>
+          <Popover placement="bottomRight" content={search} trigger="click">
+            <Button width={"131px"} type={"secondary"}>
+              <Icon.Setting /> Advanced
+            </Button>
+          </Popover>
+          <Button width={"180px"} type={"primary"}>
+            <Icon.Search /> Search
           </Button>
-        </Popover>
-        <Button width={"180px"} type={"primary"}>
-          <Icon.Search /> Search
-        </Button>
+        </BoxWrap>
       </Container>
     </Wrapper>
   );

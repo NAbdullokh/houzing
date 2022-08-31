@@ -7,6 +7,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  @media (max-width: 650px) {
+    padding: 0 25px;
+  }
 `;
 
 const Container = styled.div`
@@ -18,6 +21,16 @@ const Container = styled.div`
   gap: 20px;
   @media (max-width: 1000px) {
     padding: 0 25px;
+  }
+  @media (max-width: 650px) {
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    z-index: 888;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 25px;
+    width: 91.5%;
   }
 `;
 
@@ -57,4 +70,11 @@ const Section = styled.div`
   gap: 0 20px;
 `;
 
-export { Wrapper, Container, Icon, Advanced, Section };
+const BoxWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+`;
+
+export { Wrapper, Container, Icon, Advanced, Section, BoxWrap };

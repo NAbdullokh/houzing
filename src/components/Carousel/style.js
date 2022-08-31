@@ -9,6 +9,11 @@ const CarouselWrapper = styled("div")`
 
 const Img = styled.img`
   width: 100%;
+  filter: brightness(20%);
+  @media (max-width: 650px) {
+    height: 570px;
+    position: relative;
+  }
 `;
 
 const Icon = styled.div``;
