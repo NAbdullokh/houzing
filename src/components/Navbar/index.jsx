@@ -1,6 +1,7 @@
 import React from "react";
 import {
   activeStyle,
+  BtnWrapper,
   Container,
   Logo,
   NavbarBody,
@@ -11,11 +12,11 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import { Button } from "../Generic/Button";
 import { Popover } from "antd";
+import Nav from "./Hamburger";
 
 export const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
   const gotoSignIn = () => {
     navigate("/signin");
   };
@@ -30,7 +31,6 @@ export const Navbar = () => {
   const content = (
     <div>
       <p onClick={() => navigate("/profile")}>My Properties</p>
-      {/* <p onClick={() => navigate("/myProperties")}> My properties</p> */}
       <p onClick={() => navigate("/favorites")}>Favorites</p>
       <p onClick={logout}>Log Out</p>
     </div>
@@ -41,19 +41,26 @@ export const Navbar = () => {
   localStorage.getItem("token")
     ? (button = (
         <Popover placement="bottomRight" content={content} trigger="click">
-          <i class="fa-solid fa-user">fswd</i>
+          <i style={{ display: "flex" }} className="fa fa-user"></i>
         </Popover>
       ))
     : (button = (
-        <Button onClick={gotoSignIn} width={"120px"}>
-          Log In
-        </Button>
+        <>
+          <BtnWrapper>
+            <Button onClick={gotoSignIn} width={"120px"}>
+              Log In
+            </Button>
+          </BtnWrapper>
+
+          <i className="fa fa-user" onClick={gotoSignIn}></i>
+        </>
       ));
 
   return (
     <Wrapper>
       <Container>
         <NavbarWrapper>
+          <Nav />
           <Logo onClick={() => navigate("/home")}>
             <Logo.Icon />
             <Logo.Title>Houzing</Logo.Title>

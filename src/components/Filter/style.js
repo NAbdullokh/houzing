@@ -16,6 +16,9 @@ const Container = styled.div`
   padding: 0 130px;
   margin: 10px auto;
   gap: 20px;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 
 const Icon = styled.div`

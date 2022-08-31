@@ -29,6 +29,9 @@ const NavbarWrapper = styled.div`
   @media (max-width: 1000px) {
     padding: 0 25px;
   }
+  @media (max-width: 735px) {
+    justify-content: space-between;
+  }
 `;
 const Logo = styled.div`
   display: flex;
@@ -55,6 +58,9 @@ const NavbarBody = styled.div`
     font-weight: 400;
     font-size: 18px;
   }
+  @media (max-width: 735px) {
+    display: none;
+  }
 `;
 
 const activeStyle = ({ isActive }) => {
@@ -69,4 +75,19 @@ const activeStyle = ({ isActive }) => {
   };
 };
 
-export { Wrapper, NavbarWrapper, NavbarBody, Container, Logo, activeStyle };
+const BtnWrapper = styled.div`
+  display: block;
+  @media (max-width: 735px) {
+    display: none;
+  }
+`;
+
+export {
+  Wrapper,
+  NavbarWrapper,
+  NavbarBody,
+  BtnWrapper,
+  Container,
+  Logo,
+  activeStyle,
+};

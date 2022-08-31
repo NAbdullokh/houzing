@@ -29,7 +29,7 @@ Icon.Left = styled(arrow)`
   opacity: 0.5;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 999;
+  z-index: 777;
   :hover {
     opacity: 0.97;
   }
@@ -54,7 +54,7 @@ Icon.Right = styled(rarrow)`
   opacity: 0.5;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 999;
+  z-index: 777;
   :hover {
     opacity: 0.97;
   }
