@@ -7,7 +7,7 @@ import { ReactComponent as heart } from "../../assets/icons/love 1.svg";
 import { ReactComponent as resize } from "../../assets/icons/arrow-top-bottom.svg";
 
 const Container = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   width: 380px;
   max-width: 380px;
@@ -20,7 +20,15 @@ const Container = styled.div`
       drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
       drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   }
-  user-select: none;
+  user-select: none; */
+  /* flex: 20rem; */
+  width: 380px;
+  /* max-width: 258px; */
+  padding: 31px 0px 19px 4px;
+  display: flex;
+  margin: auto;
+  background-color: #fbfbfb;
+  flex-direction: column;
 `;
 
 const Image = styled.img`

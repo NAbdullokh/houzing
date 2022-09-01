@@ -39,6 +39,7 @@ const Cards = styled.div`
   margin-top: 32px;
   padding: 0 130px;
   gap: 20px;
+  overflow-x: hidden;
 `;
 
 const Carousel = styled(AliceCarousel)``;

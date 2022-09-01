@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { ReactComponent as logoIcon } from "../../assets/icons/logo.svg";
 
 export const Wrapper = styled.div`
-  padding-top: 40px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   background-color: var(--primaryColor);
 `;
 
@@ -14,15 +15,21 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: var(--width);
   width: 100%;
-  height: 460px;
+  height: 100%;
   padding: 0 130px;
   margin: auto;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 
 export const About = styled.div`
   flex: 3;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactUs = styled.div`
@@ -72,6 +79,11 @@ export const FooterAbout = styled.div`
   align-items: center;
   padding-top: 20px;
   justify-content: space-between;
+  @media (max-width: 650px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 export const Logo = styled.div`

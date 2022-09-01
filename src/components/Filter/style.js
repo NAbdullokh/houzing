@@ -7,9 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media (max-width: 650px) {
-    padding: 0 25px;
-  }
+  padding: 0 25px;
 `;
 
 const Container = styled.div`
@@ -27,23 +25,28 @@ const Container = styled.div`
     position: absolute;
     top: 40%;
     z-index: 888;
+    left: 20px;
+    right: 45px;
     background: #ffffff;
     border-radius: 3px;
     padding: 25px;
-    width: 91.5%;
+    width: 91%;
   }
 `;
 
 const Icon = styled.div`
   margin-right: 8px;
 `;
+
 Icon.Home = styled(home)`
   margin-right: 8px;
   margin-top: 6px;
 `;
+
 Icon.Setting = styled(setting)`
   margin-right: 8px;
 `;
+
 Icon.Search = styled(search)`
   margin-right: 8px;
 `;
@@ -55,6 +58,7 @@ const Advanced = styled.div`
   border-radius: 5px;
   padding: 10px;
 `;
+
 Advanced.Title = styled.div`
   font-family: "Montserrat";
   font-style: normal;
@@ -63,6 +67,7 @@ Advanced.Title = styled.div`
   line-height: 24px;
   color: #0d263b;
 `;
+
 const Section = styled.div`
   display: flex;
   margin-bottom: 15px;

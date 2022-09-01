@@ -13,11 +13,11 @@ export const Home = () => {
     <Container>
       <Filter />
       <Slider />
-      <Recommended />
+      {/* <Recommended /> */}
       <Choose />
-      <Category />
+      {/* <Category /> */}
       <ReadMore />
-      <Comments />
+      {/* <Comments /> */}
     </Container>
   );
 };

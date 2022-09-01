@@ -40,6 +40,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #696969;
 }
 .center {
@@ -64,6 +65,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+  margin-top: 30px;
 }
 
 .footerText {

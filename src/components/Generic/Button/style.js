@@ -45,6 +45,7 @@ const Container = styled.div`
   margin-top: ${({ mt }) => `${mt}px`};
   margin-bottom: ${({ mb }) => `${mb}px`};
   cursor: pointer;
+
   ${({ type }) => getType(type)}
   :active {
     transform: scale(0.98);

@@ -17,6 +17,9 @@ const Container = styled.div`
   padding: 0 130px;
   margin: auto;
   flex-direction: column;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 
 Container.Title = styled.p`
@@ -35,6 +38,7 @@ Container.Description = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: #696969;
+  text-align: center;
 `;
 
 const CardWrapper = styled.div`
@@ -43,10 +47,11 @@ const CardWrapper = styled.div`
   justify-content: center;
   gap: 91px;
   margin-top: 40px;
+  flex-wrap: wrap;
 `;
 
 const Card = styled.div`
-  width: 243px;
+  flex: 1 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;

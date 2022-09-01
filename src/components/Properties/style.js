@@ -24,13 +24,16 @@ Wrapper.Title = styled.p`
 `;
 
 const Body = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: auto;
   width: 100%;
-  padding: 0 130px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap: 1rem;
+  align-items: start;
   max-width: var(--width);
+  padding: 0 130px;
+  @media (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 
 export { Container, Wrapper, Body };
