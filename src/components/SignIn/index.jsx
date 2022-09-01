@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Footer, InputWrapper, Wrapper } from "./style";
+import { Container, Footer, InputWrapper, Show, Wrapper } from "./style";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "react-query";
 
@@ -78,15 +78,18 @@ export const SignIn = () => {
               setError(false);
             }}
           />
+          {show ? (
+            <Show
+              className="fa fa-eye-slash"
+              onClick={() => setShow(!show)}
+            ></Show>
+          ) : (
+            <Show className="fa fa-eye" onClick={() => setShow(!show)}></Show>
+          )}
         </InputWrapper>
-        <p onClick={() => setShow(!show)}>show</p>
 
         <Footer>
           <Footer.Rem>
-            <div>
-              <input type="checkbox" />
-              <p>Remember me</p>
-            </div>
             <Footer.Forgot>Forgot</Footer.Forgot>
           </Footer.Rem>
           <Footer.Btn onClick={onSubmit}>Login</Footer.Btn>

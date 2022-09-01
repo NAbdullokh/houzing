@@ -41,6 +41,9 @@ Icon.Left = styled(arrow)`
   & path {
     fill: #0d263b;
   }
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 Icon.Right = styled(rarrow)`
@@ -65,6 +68,9 @@ Icon.Right = styled(rarrow)`
   }
   & path {
     fill: #0d263b;
+  }
+  @media (max-width: 650px) {
+    display: none;
   }
 `;
 

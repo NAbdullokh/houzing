@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 650px) {
+    padding: 0 25px;
+    height: 100vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -17,6 +21,9 @@ export const Container = styled.div`
   box-shadow: 0px 10px 30px rgba(13, 38, 59, 0.05);
   border-radius: 3px;
   box-sizing: border-box;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 Container.Title = styled.p`
@@ -32,6 +39,12 @@ Container.Title = styled.p`
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
+`;
+export const Show = styled.i`
+  position: absolute;
+  top: 75px;
+  right: 0;
 `;
 
 InputWrapper.Input = styled.input`
@@ -42,8 +55,12 @@ InputWrapper.Input = styled.input`
   border-bottom: 2px solid gray;
   padding-bottom: 5px;
   padding-left: 0px;
+  padding-right: 25px;
   :focus {
     border-bottom: 2px solid #0061df;
+  }
+  @media (max-width: 650px) {
+    width: 100%;
   }
 `;
 
@@ -87,4 +104,7 @@ Footer.Btn = styled.button`
   color: #ffffff;
   background: #0061df;
   border-radius: 2px;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
 `;
