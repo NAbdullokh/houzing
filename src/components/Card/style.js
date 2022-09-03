@@ -22,6 +22,7 @@ const Container = styled.div`
   }
   user-select: none; */
   /* flex: 20rem; */
+
   width: 380px;
   /* max-width: 258px; */
   padding: 31px 0px 19px 4px;
