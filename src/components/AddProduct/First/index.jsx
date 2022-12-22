@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { useNavigate, useParams } from "react-router-dom";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useMutation, useQuery } from "react-query";
+import { useHttp } from "../../../hooks/useHttps";
 
 const First = () => {
   const [data, setData] = useState({});
@@ -214,22 +215,22 @@ const First = () => {
   // // navigate("/home");
   // console.log(formik);
   return (
-    <Wrapper>
+    <Wrapper onSubmit={formik.handleSubmit}>
       <Container>
         <p className="title">Contact information</p>
         <InputWrapper>
           <Input
             type="text"
             placeholder="Property title*"
-            value={formik.values.name}
+            value={formik.values.data?.address || ""}
             onChange={formik.handleChange}
             name="name"
           />
           <Input
             type="text"
             placeholder="Type"
-            value={formik.values.type}
             onChange={formik.handleChange}
+            value={formik.values.data?.category?.name || ""}
             name="type"
           />
         </InputWrapper>
@@ -237,7 +238,7 @@ const First = () => {
           type="text"
           placeholder="Property Description*"
           mt="40"
-          value={formik.values.description}
+          value={formik.values.data?.description || ""}
           onChange={formik.handleChange}
           name="description"
         />
@@ -287,8 +288,8 @@ const First = () => {
           <Input
             type="text"
             placeholder="Rooms"
-            value={formik.values.room}
             onChange={formik.handleChange}
+            value={formik.values.data?.houseDetails?.room || ""}
             name="room"
           />
         </InputWrapper>
@@ -297,22 +298,22 @@ const First = () => {
           <Input
             type="text"
             placeholder="Beds"
-            value={formik.values.beds}
             onChange={formik.handleChange}
+            value={formik.values.data?.houseDetails?.beds || ""}
             name="beds"
           />
           <Input
             type="text"
             placeholder="Baths"
-            value={formik.values.bath}
+            value={formik.values.data?.houseDetails?.bath || ""}
             onChange={formik.handleChange}
             name="bath"
           />
           <Input
             type="text"
             placeholder="Garages"
-            value={formik.values.garage}
             onChange={formik.handleChange}
+            value={formik.values.data?.houseDetails?.garage || ""}
             name="garage"
           />
         </InputWrapper>
@@ -321,15 +322,15 @@ const First = () => {
           <Input
             type="text"
             placeholder="Year bulid"
-            value={formik.values.yearBuilt}
             onChange={formik.handleChange}
             name="yearBuilt"
+            value={formik.values.data?.houseDetails?.yearBuilt || ""}
           />
           <Input
             type="text"
             placeholder="Home area (sqft)"
-            value={formik.values.sqft}
             onChange={formik.handleChange}
+            value={formik.values.data?.houseDetails?.area || ""}
             name="sqft"
           />
           <Input
@@ -355,15 +356,15 @@ const First = () => {
           <Input
             type="text"
             placeholder="Price ($)"
-            value={formik.values.price}
+            value={formik.values.data?.price || ""}
             onChange={formik.handleChange}
             name="price"
           />
           <Input
             type="text"
             placeholder="Price Prefix"
-            value={formik.values.prefixPrice}
             onChange={formik.handleChange}
+            value={formik.values.data?.salePrice || ""}
             name="prefixPrice"
           />
         </InputWrapper>
@@ -392,15 +393,15 @@ const First = () => {
           <Input
             type="text"
             placeholder="Regions"
-            value={formik.values.region}
             onChange={formik.handleChange}
+            value={formik.values.data?.latitude || ""}
             name="region"
           />
           <Input
             type="text"
             placeholder="Address"
-            value={formik.values.address}
             onChange={formik.handleChange}
+            value={formik.values.data?.longitude || ""}
             name="address"
           />
         </InputWrapper>
@@ -441,7 +442,8 @@ const First = () => {
         type="primary"
         width="280px"
         ml="auto"
-        mb="50px"
+        mb="30"
+        mt="50"
       >
         Submit
       </Button>
